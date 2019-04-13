@@ -15,7 +15,15 @@
   };
 
   const styleItems = (elements, items) => {
-    items.sort((a, b) => b.price - a.price);
+    const [itemsWithPrice, itemsWithoutPrice] = items.reduce(
+      (acc, el) => {
+        acc[!isNaN(el.price) && isFinite(el.price) ? "0" : "1"].push(el);
+        return acc;
+      },
+      [[], []]
+    );
+    itemsWithPrice.sort((a, b) => b.price - a.price);
+    items = itemsWithPrice.concat(itemsWithoutPrice);
     items.forEach((item, index) => {
       elements[item.index].setAttribute("style", `order: ${index};`);
     });
