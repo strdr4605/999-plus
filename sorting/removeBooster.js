@@ -1,8 +1,6 @@
 (function() {
   const list = document.querySelectorAll("ul.ads-list-photo")[0];
 
-  const getPrice = str => parseInt(str.replace(/\s/g, ""));
-
   const removeBoosters = list => {
     let itemsWithBooster = Array.from(list.children)
       .map((item, index) => ({ index, item }))

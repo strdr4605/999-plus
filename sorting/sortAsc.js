@@ -1,7 +1,18 @@
 (function() {
   const list = document.querySelectorAll("ul.ads-list-photo")[0];
 
-  const getPrice = str => parseInt(str.replace(/\s/g, ""));
+  const getPrice = str => {
+    const currencies = {
+      MDL: 1,
+      $: 18,
+      "€": 20
+    };
+    const noSpaceStr = str.replace(/\s/g, "");
+    const currency = noSpaceStr.match(/MDL|\$|€/g)
+      ? noSpaceStr.match(/MDL|\$|€/g)[0]
+      : "MDL";
+    return parseInt(noSpaceStr) * (currencies[currency] || 1);
+  };
 
   const styleItems = (elements, items) => {
     items.sort((a, b) => b.price - a.price);
