@@ -4,12 +4,13 @@
     <style>
       button {
         height: 30px;
-        width: 40px;
+        min-width: 40px;
         outline: none;
-        padding: 1px 3px;
+        padding: 1px 10px;
+        margin: 0 10px;
       }
       body {
-        width: 100px;
+        width: auto;
         display: flex;
         justify-content: space-around;
       }
@@ -17,7 +18,24 @@
   </head>
   <body>
     <button id="changeColor"></button>
-    <button id="sort">Sort</button>
+    <button id="sortAsc">
+      <img
+        src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FShare%2Ficon%2FandroidL%2FData%2Fascending_sorting1600.png"
+        width="25"
+        height="25"
+        style="transform: rotate(180deg)"
+      />
+    </button>
+    <button id="sortDes">
+      <img
+        src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FShare%2Ficon%2FandroidL%2FData%2Fascending_sorting1600.png"
+        width="25"
+        height="25"
+      />
+    </button>
+    <button id="removeBooster">
+      Remove Booster!
+    </button>
     <script src="popup.js"></script>
     <script src="sort.js"></script>
   </body>
