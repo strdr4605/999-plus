@@ -1,6 +1,6 @@
 {
   "name": "999 Pus",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extension for sorting 999.md items",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "options_page": "options.html",
