@@ -28,3 +28,13 @@ removeBoosterBtn.onclick = element => {
     });
   });
 };
+
+// Auto options
+
+const autoSortAsc = document.getElementById("autoSortAsc");
+
+autoSortAsc.onclick = event => {
+  chrome.storage.sync.set({ autoSortAsc: event.target.checked }, () => {
+    console.log("autoSortAsc is " + event.target.checked);
+  });
+};

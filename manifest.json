@@ -11,5 +11,11 @@
   "page_action": {
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://999.md/*", "https://999.md/*"],
+      "js": ["content.js"]
+    }
+  ],
   "manifest_version": 2
 }
