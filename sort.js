@@ -40,3 +40,13 @@ autoSortAsc.onclick = event => {
     console.log("autoSortAsc is " + event.target.checked);
   });
 };
+
+const autoBooster = document.getElementById("autoBooster");
+chrome.storage.sync.get("autoBooster", data => {
+  autoBooster.checked = data.autoBooster;
+});
+autoBooster.onclick = event => {
+  chrome.storage.sync.set({ autoBooster: event.target.checked }, () => {
+    console.log("autoBooster is " + event.target.checked);
+  });
+};

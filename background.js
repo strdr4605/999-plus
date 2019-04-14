@@ -16,7 +16,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 
   // Auto options
-  chrome.storage.sync.set({ autoSortAsc: false }, () => {
+  chrome.storage.sync.set({ autoSortAsc: false, autoBooster: false }, () => {
     console.log("Auto sort asc: 'false'");
   });
 });
