@@ -1,13 +1,14 @@
 button {
   height: 40px;
-  width: 50px;
+  width: 140px;
   outline: none;
-  padding: 1px 10px;
+  padding: 1px 1px;
   margin: 0 10px;
-  font-size: 0.7em;
+  font-size: 1.1em;
 }
 body {
   width: auto;
+  min-width: 360px;
   display: flex;
   flex-flow: column;
   justify-content: space-around;
@@ -16,12 +17,20 @@ body {
 .row {
   display: flex;
   margin: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row:last-of-type {
+  border-top: #ccc solid 1px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .row div {
   display: flex;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 0 5px;
 }
 
